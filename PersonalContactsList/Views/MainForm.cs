@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalContactsList.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace PersonalContactsList
 
         private void Form1_Load ( object sender, EventArgs e )
         {
+            
+        }
 
+        private void btnNewContact_Click ( object sender, EventArgs e )
+        {
+            frmNewContactForm newContact = new frmNewContactForm();
+            newContact.Show();
         }
     }
 }

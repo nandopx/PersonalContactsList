@@ -1,12 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using PersonalContactsList.Domain;
+using System.Configuration;
 
 namespace PersonalContactsList.Data
 {
-    class ContactsContext : DbContext
+    public class ContactsContext : DbContext
     {
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Address> Adresses { get; set; }
+
         protected override void OnConfiguring ( DbContextOptionsBuilder optionsBuilder )
         {
             optionsBuilder.UseSqlServer( ConfigurationManager.ConnectionStrings["ContactsConn"].ConnectionString );
