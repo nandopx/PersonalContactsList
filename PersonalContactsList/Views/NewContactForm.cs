@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalContactsList.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,24 @@ namespace PersonalContactsList.Views
         private void textBox2_TextChanged ( object sender, EventArgs e )
         {
 
+        }
+
+        private void btnSaveContact_Click ( object sender, EventArgs e )
+        {
+            var controller = new ContactController();
+            controller.NewContact( txbName.Text, txbPhone.Text, txbEmail.Text, txbBirthday.Text,
+                txbLineAddress.Text, txbNumber.Text, txbComplement.Text, txbdistrict.Text, txbCity.Text,
+                cmbProvince.Text, txbPostalCode.Text, cmbAddresType.Text );
+
+            MessageBox.Show("Contact saved!");
+
+            foreach (var control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+            }
         }
     }
 }

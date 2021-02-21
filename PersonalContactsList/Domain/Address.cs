@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PersonalContactsList.Domain
 {
-    [Table("ADDRESS")]
+    [Table("Address")]
     public class Address
     {
         [Key]
@@ -29,7 +29,7 @@ namespace PersonalContactsList.Domain
 
         [Required]
         [MaxLength(40)]
-        public string Cyty { get; set; }
+        public string City { get; set; }
 
         [Required]
         [MaxLength(2)]
@@ -45,16 +45,16 @@ namespace PersonalContactsList.Domain
 
         public virtual ICollection<Contact> Contacts { get; set; }
 
-        public Address ( Guid id, string lineAddress, string number, string complement, 
-            string district, string cyty, Province province, string postalCode, 
-            AddressType addressType )
+        public Address ( string lineAddress, string number, string complement, 
+            string district, string city, Province province, string postalCode, 
+            AddressType addressType)
         {
             Id = Guid.NewGuid();
             LineAddress = lineAddress;
             Number = number;
             Complement = complement;
             District = district;
-            Cyty = cyty;
+            City = city;
             Province = province;
             PostalCode = postalCode;
             AddressType = addressType;

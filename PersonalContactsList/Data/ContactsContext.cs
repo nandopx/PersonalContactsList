@@ -11,7 +11,7 @@ namespace PersonalContactsList.Data
 
         protected override void OnConfiguring ( DbContextOptionsBuilder optionsBuilder )
         {
-            optionsBuilder.UseSqlServer( ConfigurationManager.ConnectionStrings["ContactsConn"].ConnectionString );
+            optionsBuilder.UseSqlServer( @"Data Source=.\sqlexpress02;Initial Catalog=CONTACTS;User ID=dev;" );
         }
     }
 }

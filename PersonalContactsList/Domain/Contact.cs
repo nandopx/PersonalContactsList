@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace PersonalContactsList.Domain
 {
-    [Table( "CONTACT" )]
+    [Table("contact")]
     public class Contact
     {
         [Key]
@@ -25,9 +23,29 @@ namespace PersonalContactsList.Domain
         public string Email { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime Birthday { get; set; }
+
+        [Required]
         public Address Address { get; set; }
 
         [Required]
-        public Guid AddressId { get; set; }
+        public virtual Guid AddressId { get; set; }
+
+        public Contact ()
+        {
+
+        }
+
+        public Contact ( string name, string phoneNumber, string email, DateTime birthday, Address address)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+            PhoneNumber = phoneNumber;
+            Email = email;
+            Birthday = birthday;
+            Address = address;
+        }
     }
 }

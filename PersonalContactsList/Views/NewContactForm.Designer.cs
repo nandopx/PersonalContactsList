@@ -40,18 +40,20 @@ namespace PersonalContactsList.Views
             this.lblPostalCode = new System.Windows.Forms.Label();
             this.lblProvince = new System.Windows.Forms.Label();
             this.lblAddressType = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbProvince = new System.Windows.Forms.ComboBox();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.txbPhone = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.txbLineAddress = new System.Windows.Forms.TextBox();
+            this.txbNumber = new System.Windows.Forms.TextBox();
+            this.txbComplement = new System.Windows.Forms.TextBox();
+            this.txbdistrict = new System.Windows.Forms.TextBox();
+            this.txbCity = new System.Windows.Forms.TextBox();
+            this.txbPostalCode = new System.Windows.Forms.TextBox();
+            this.cmbAddresType = new System.Windows.Forms.ComboBox();
             this.btnSaveContact = new System.Windows.Forms.Button();
+            this.txbBirthday = new System.Windows.Forms.TextBox();
+            this.Birthday = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblName
@@ -59,7 +61,7 @@ namespace PersonalContactsList.Views
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblName.Location = new System.Drawing.Point(12, 42);
+            this.lblName.Location = new System.Drawing.Point(15, 27);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(65, 24);
             this.lblName.TabIndex = 0;
@@ -70,7 +72,7 @@ namespace PersonalContactsList.Views
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(490, 40);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(552, 27);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(152, 24);
             this.lblPhoneNumber.TabIndex = 1;
@@ -81,7 +83,7 @@ namespace PersonalContactsList.Views
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblEmail.Location = new System.Drawing.Point(15, 91);
+            this.lblEmail.Location = new System.Drawing.Point(15, 97);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(62, 24);
             this.lblEmail.TabIndex = 2;
@@ -92,7 +94,7 @@ namespace PersonalContactsList.Views
             this.lblLineAddress.AutoSize = true;
             this.lblLineAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblLineAddress.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblLineAddress.Location = new System.Drawing.Point(12, 142);
+            this.lblLineAddress.Location = new System.Drawing.Point(15, 167);
             this.lblLineAddress.Name = "lblLineAddress";
             this.lblLineAddress.Size = new System.Drawing.Size(133, 24);
             this.lblLineAddress.TabIndex = 3;
@@ -103,7 +105,7 @@ namespace PersonalContactsList.Views
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNumber.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblNumber.Location = new System.Drawing.Point(605, 142);
+            this.lblNumber.Location = new System.Drawing.Point(596, 167);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(85, 24);
             this.lblNumber.TabIndex = 4;
@@ -114,7 +116,7 @@ namespace PersonalContactsList.Views
             this.lblAdditional.AutoSize = true;
             this.lblAdditional.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdditional.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblAdditional.Location = new System.Drawing.Point(12, 196);
+            this.lblAdditional.Location = new System.Drawing.Point(15, 238);
             this.lblAdditional.Name = "lblAdditional";
             this.lblAdditional.Size = new System.Drawing.Size(103, 24);
             this.lblAdditional.TabIndex = 5;
@@ -125,7 +127,7 @@ namespace PersonalContactsList.Views
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDistrict.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblDistrict.Location = new System.Drawing.Point(268, 195);
+            this.lblDistrict.Location = new System.Drawing.Point(324, 239);
             this.lblDistrict.Name = "lblDistrict";
             this.lblDistrict.Size = new System.Drawing.Size(72, 24);
             this.lblDistrict.TabIndex = 6;
@@ -136,7 +138,7 @@ namespace PersonalContactsList.Views
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCity.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCity.Location = new System.Drawing.Point(15, 248);
+            this.lblCity.Location = new System.Drawing.Point(15, 309);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(44, 24);
             this.lblCity.TabIndex = 7;
@@ -147,7 +149,7 @@ namespace PersonalContactsList.Views
             this.lblPostalCode.AutoSize = true;
             this.lblPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPostalCode.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblPostalCode.Location = new System.Drawing.Point(567, 194);
+            this.lblPostalCode.Location = new System.Drawing.Point(680, 237);
             this.lblPostalCode.Name = "lblPostalCode";
             this.lblPostalCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblPostalCode.Size = new System.Drawing.Size(122, 24);
@@ -159,7 +161,7 @@ namespace PersonalContactsList.Views
             this.lblProvince.AutoSize = true;
             this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblProvince.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblProvince.Location = new System.Drawing.Point(336, 249);
+            this.lblProvince.Location = new System.Drawing.Point(394, 310);
             this.lblProvince.Name = "lblProvince";
             this.lblProvince.Size = new System.Drawing.Size(92, 24);
             this.lblProvince.TabIndex = 9;
@@ -170,19 +172,19 @@ namespace PersonalContactsList.Views
             this.lblAddressType.AutoSize = true;
             this.lblAddressType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAddressType.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblAddressType.Location = new System.Drawing.Point(502, 248);
+            this.lblAddressType.Location = new System.Drawing.Point(619, 308);
             this.lblAddressType.Name = "lblAddressType";
             this.lblAddressType.Size = new System.Drawing.Size(140, 24);
             this.lblAddressType.TabIndex = 10;
             this.lblAddressType.Text = "Address Type";
             // 
-            // comboBox1
+            // cmbProvince
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbProvince.BackColor = System.Drawing.SystemColors.Info;
+            this.cmbProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbProvince.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbProvince.FormattingEnabled = true;
+            this.cmbProvince.Items.AddRange(new object[] {
             "AC",
             "AL",
             "AP",
@@ -210,144 +212,168 @@ namespace PersonalContactsList.Views
             "SP",
             "SE",
             "TO"});
-            this.comboBox1.Location = new System.Drawing.Point(434, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(62, 26);
-            this.comboBox1.TabIndex = 10;
+            this.cmbProvince.Location = new System.Drawing.Point(492, 309);
+            this.cmbProvince.Name = "cmbProvince";
+            this.cmbProvince.Size = new System.Drawing.Size(62, 26);
+            this.cmbProvince.TabIndex = 11;
             // 
-            // textBox1
+            // txbName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.Location = new System.Drawing.Point(83, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Name";
-            this.textBox1.Size = new System.Drawing.Size(401, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txbName.BackColor = System.Drawing.SystemColors.Info;
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbName.Location = new System.Drawing.Point(86, 26);
+            this.txbName.Name = "txbName";
+            this.txbName.PlaceholderText = "Name";
+            this.txbName.Size = new System.Drawing.Size(401, 25);
+            this.txbName.TabIndex = 1;
+            this.txbName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txbPhone
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox2.Location = new System.Drawing.Point(648, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "e.g. 21xxxxxxxxx";
-            this.textBox2.Size = new System.Drawing.Size(140, 25);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txbPhone.BackColor = System.Drawing.SystemColors.Info;
+            this.txbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPhone.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbPhone.Location = new System.Drawing.Point(710, 27);
+            this.txbPhone.Name = "txbPhone";
+            this.txbPhone.PlaceholderText = "e.g. 21xxxxxxxxx";
+            this.txbPhone.Size = new System.Drawing.Size(140, 25);
+            this.txbPhone.TabIndex = 2;
+            this.txbPhone.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txbEmail
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox3.Location = new System.Drawing.Point(83, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "example@example.com";
-            this.textBox3.Size = new System.Drawing.Size(317, 25);
-            this.textBox3.TabIndex = 3;
+            this.txbEmail.BackColor = System.Drawing.SystemColors.Info;
+            this.txbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbEmail.Location = new System.Drawing.Point(83, 97);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.PlaceholderText = "example@example.com";
+            this.txbEmail.Size = new System.Drawing.Size(317, 25);
+            this.txbEmail.TabIndex = 3;
             // 
-            // textBox4
+            // txbLineAddress
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox4.Location = new System.Drawing.Point(158, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Street that your home or business";
-            this.textBox4.Size = new System.Drawing.Size(441, 25);
-            this.textBox4.TabIndex = 4;
+            this.txbLineAddress.BackColor = System.Drawing.SystemColors.Info;
+            this.txbLineAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbLineAddress.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbLineAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbLineAddress.Location = new System.Drawing.Point(161, 167);
+            this.txbLineAddress.Name = "txbLineAddress";
+            this.txbLineAddress.PlaceholderText = "Street that your home or business";
+            this.txbLineAddress.Size = new System.Drawing.Size(365, 25);
+            this.txbLineAddress.TabIndex = 5;
             // 
-            // textBox5
+            // txbNumber
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox5.Location = new System.Drawing.Point(696, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "123456";
-            this.textBox5.Size = new System.Drawing.Size(92, 25);
-            this.textBox5.TabIndex = 5;
+            this.txbNumber.BackColor = System.Drawing.SystemColors.Info;
+            this.txbNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNumber.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbNumber.Location = new System.Drawing.Point(687, 167);
+            this.txbNumber.Name = "txbNumber";
+            this.txbNumber.PlaceholderText = "123456";
+            this.txbNumber.Size = new System.Drawing.Size(104, 25);
+            this.txbNumber.TabIndex = 6;
             // 
-            // textBox6
+            // txbComplement
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox6.Location = new System.Drawing.Point(121, 195);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PlaceholderText = "Complemments";
-            this.textBox6.Size = new System.Drawing.Size(141, 25);
-            this.textBox6.TabIndex = 6;
+            this.txbComplement.BackColor = System.Drawing.SystemColors.Info;
+            this.txbComplement.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbComplement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbComplement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbComplement.Location = new System.Drawing.Point(124, 237);
+            this.txbComplement.Name = "txbComplement";
+            this.txbComplement.PlaceholderText = "Complemments";
+            this.txbComplement.Size = new System.Drawing.Size(141, 25);
+            this.txbComplement.TabIndex = 7;
             // 
-            // textBox7
+            // txbdistrict
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox7.Location = new System.Drawing.Point(346, 194);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PlaceholderText = "District name";
-            this.textBox7.Size = new System.Drawing.Size(215, 25);
-            this.textBox7.TabIndex = 7;
+            this.txbdistrict.BackColor = System.Drawing.SystemColors.Info;
+            this.txbdistrict.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbdistrict.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbdistrict.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbdistrict.Location = new System.Drawing.Point(402, 238);
+            this.txbdistrict.Name = "txbdistrict";
+            this.txbdistrict.PlaceholderText = "District name";
+            this.txbdistrict.Size = new System.Drawing.Size(215, 25);
+            this.txbdistrict.TabIndex = 8;
             // 
-            // textBox8
+            // txbCity
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox8.Location = new System.Drawing.Point(65, 248);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.PlaceholderText = "City name";
-            this.textBox8.Size = new System.Drawing.Size(265, 25);
-            this.textBox8.TabIndex = 9;
+            this.txbCity.BackColor = System.Drawing.SystemColors.Info;
+            this.txbCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCity.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbCity.Location = new System.Drawing.Point(65, 309);
+            this.txbCity.Name = "txbCity";
+            this.txbCity.PlaceholderText = "City name";
+            this.txbCity.Size = new System.Drawing.Size(265, 25);
+            this.txbCity.TabIndex = 10;
             // 
-            // textBox9
+            // txbPostalCode
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox9.Location = new System.Drawing.Point(688, 196);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.PlaceholderText = "12345678";
-            this.textBox9.Size = new System.Drawing.Size(100, 25);
-            this.textBox9.TabIndex = 8;
+            this.txbPostalCode.BackColor = System.Drawing.SystemColors.Info;
+            this.txbPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPostalCode.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbPostalCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbPostalCode.Location = new System.Drawing.Point(801, 239);
+            this.txbPostalCode.Name = "txbPostalCode";
+            this.txbPostalCode.PlaceholderText = "12345678";
+            this.txbPostalCode.Size = new System.Drawing.Size(100, 25);
+            this.txbPostalCode.TabIndex = 9;
             // 
-            // comboBox2
+            // cmbAddresType
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbAddresType.BackColor = System.Drawing.SystemColors.Info;
+            this.cmbAddresType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbAddresType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbAddresType.FormattingEnabled = true;
+            this.cmbAddresType.Items.AddRange(new object[] {
             "Comercial",
             "Personal"});
-            this.comboBox2.Location = new System.Drawing.Point(648, 247);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(115, 26);
-            this.comboBox2.TabIndex = 11;
+            this.cmbAddresType.Location = new System.Drawing.Point(765, 307);
+            this.cmbAddresType.Name = "cmbAddresType";
+            this.cmbAddresType.Size = new System.Drawing.Size(115, 26);
+            this.cmbAddresType.TabIndex = 12;
             // 
             // btnSaveContact
             // 
             this.btnSaveContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveContact.Location = new System.Drawing.Point(636, 309);
+            this.btnSaveContact.Location = new System.Drawing.Point(727, 353);
             this.btnSaveContact.Name = "btnSaveContact";
-            this.btnSaveContact.Size = new System.Drawing.Size(152, 66);
-            this.btnSaveContact.TabIndex = 12;
+            this.btnSaveContact.Size = new System.Drawing.Size(180, 66);
+            this.btnSaveContact.TabIndex = 13;
             this.btnSaveContact.Text = "Save";
             this.btnSaveContact.UseVisualStyleBackColor = true;
+            this.btnSaveContact.Click += new System.EventHandler(this.btnSaveContact_Click);
+            // 
+            // txbBirthday
+            // 
+            this.txbBirthday.BackColor = System.Drawing.SystemColors.Info;
+            this.txbBirthday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbBirthday.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbBirthday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txbBirthday.Location = new System.Drawing.Point(551, 97);
+            this.txbBirthday.Name = "txbBirthday";
+            this.txbBirthday.PlaceholderText = "dd/MM/yyyy";
+            this.txbBirthday.Size = new System.Drawing.Size(130, 25);
+            this.txbBirthday.TabIndex = 4;
+            // 
+            // Birthday
+            // 
+            this.Birthday.AutoSize = true;
+            this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Birthday.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Birthday.Location = new System.Drawing.Point(460, 96);
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Size = new System.Drawing.Size(85, 24);
+            this.Birthday.TabIndex = 13;
+            this.Birthday.Text = "Birthday";
             // 
             // frmNewContactForm
             // 
@@ -355,19 +381,21 @@ namespace PersonalContactsList.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 387);
+            this.ClientSize = new System.Drawing.Size(919, 431);
+            this.Controls.Add(this.txbBirthday);
+            this.Controls.Add(this.Birthday);
             this.Controls.Add(this.btnSaveContact);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbAddresType);
+            this.Controls.Add(this.txbPostalCode);
+            this.Controls.Add(this.txbCity);
+            this.Controls.Add(this.txbdistrict);
+            this.Controls.Add(this.txbComplement);
+            this.Controls.Add(this.txbNumber);
+            this.Controls.Add(this.txbLineAddress);
+            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.txbPhone);
+            this.Controls.Add(this.txbName);
+            this.Controls.Add(this.cmbProvince);
             this.Controls.Add(this.lblAddressType);
             this.Controls.Add(this.lblProvince);
             this.Controls.Add(this.lblPostalCode);
@@ -402,17 +430,19 @@ namespace PersonalContactsList.Views
         private System.Windows.Forms.Label lblPostalCode;
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.Label lblAddressType;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbProvince;
+        private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.TextBox txbPhone;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.TextBox txbLineAddress;
+        private System.Windows.Forms.TextBox txbNumber;
+        private System.Windows.Forms.TextBox txbComplement;
+        private System.Windows.Forms.TextBox txbdistrict;
+        private System.Windows.Forms.TextBox txbCity;
+        private System.Windows.Forms.TextBox txbPostalCode;
+        private System.Windows.Forms.ComboBox cmbAddresType;
         private System.Windows.Forms.Button btnSaveContact;
+        private System.Windows.Forms.TextBox txbBirthday;
+        private System.Windows.Forms.Label Birthday;
     }
 }
