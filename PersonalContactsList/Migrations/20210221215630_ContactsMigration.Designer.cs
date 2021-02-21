@@ -10,8 +10,8 @@ using PersonalContactsList.Data;
 namespace PersonalContactsList.Migrations
 {
     [DbContext(typeof(ContactsContext))]
-    [Migration("20210221161055_ContactMigrations")]
-    partial class ContactMigrations
+    [Migration("20210221215630_ContactsMigration")]
+    partial class ContactsMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -66,7 +66,7 @@ namespace PersonalContactsList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Address");
+                    b.ToTable("ADDRESS");
                 });
 
             modelBuilder.Entity("PersonalContactsList.Domain.Contact", b =>
@@ -79,7 +79,7 @@ namespace PersonalContactsList.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Birthday")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -100,7 +100,7 @@ namespace PersonalContactsList.Migrations
 
                     b.HasIndex("AddressId");
 
-                    b.ToTable("contact");
+                    b.ToTable("CONTACT");
                 });
 
             modelBuilder.Entity("PersonalContactsList.Domain.Contact", b =>

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PersonalContactsList.Domain
 {
-    [Table("contact")]
+    [Table("CONTACT")]
     public class Contact
     {
         [Key]

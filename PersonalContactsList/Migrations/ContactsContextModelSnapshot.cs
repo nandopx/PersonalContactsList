@@ -64,7 +64,7 @@ namespace PersonalContactsList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Address");
+                    b.ToTable("ADDRESS");
                 });
 
             modelBuilder.Entity("PersonalContactsList.Domain.Contact", b =>
@@ -77,7 +77,7 @@ namespace PersonalContactsList.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Birthday")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -98,7 +98,7 @@ namespace PersonalContactsList.Migrations
 
                     b.HasIndex("AddressId");
 
-                    b.ToTable("contact");
+                    b.ToTable("CONTACT");
                 });
 
             modelBuilder.Entity("PersonalContactsList.Domain.Contact", b =>

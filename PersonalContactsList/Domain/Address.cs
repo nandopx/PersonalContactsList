@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PersonalContactsList.Domain
 {
-    [Table("Address")]
+    [Table("ADDRESS")]
     public class Address
     {
         [Key]

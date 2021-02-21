@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PersonalContactsList.Migrations
 {
-    public partial class ContactMigrations : Migration
+    public partial class ContactsMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Address",
+                name: "ADDRESS",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -23,11 +23,11 @@ namespace PersonalContactsList.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Address", x => x.Id);
+                    table.PrimaryKey("PK_ADDRESS", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "contact",
+                name: "CONTACT",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -39,28 +39,28 @@ namespace PersonalContactsList.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_contact", x => x.Id);
+                    table.PrimaryKey("PK_CONTACT", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_contact_Address_AddressId",
+                        name: "FK_CONTACT_ADDRESS_AddressId",
                         column: x => x.AddressId,
-                        principalTable: "Address",
+                        principalTable: "ADDRESS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_contact_AddressId",
-                table: "contact",
+                name: "IX_CONTACT_AddressId",
+                table: "CONTACT",
                 column: "AddressId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "contact");
+                name: "CONTACT");
 
             migrationBuilder.DropTable(
-                name: "Address");
+                name: "ADDRESS");
         }
     }
 }
